@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // Hook
 export default function useLocalStorage(key, initialValue) {
   // State to store our value
@@ -33,5 +33,5 @@ export default function useLocalStorage(key, initialValue) {
     }
   };
 
-  return [key, storedValue, setValue];
+  return [storedValue, setValue];
 }

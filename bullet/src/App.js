@@ -1,4 +1,6 @@
 import "./App.css";
+import { PostContextProvider } from "./modules/common/context/post-context";
+// import MonthContainer from "./modules/month/components/MonthContainer";
 import DayContainer from "./modules/day/components/DayContainer";
 
 function App() {
@@ -6,7 +8,9 @@ function App() {
     <div className="App">
       <header className="App-header">Bullet Journal</header>
       <div className="bullet-container">
-        <DayContainer />
+        <PostContextProvider>
+          <DayContainer />
+        </PostContextProvider>
       </div>
     </div>
   );
